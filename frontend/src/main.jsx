@@ -9,3 +9,10 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+    ///this is for now imma continue with the navbar
+    ///reminding myself because I am lazy asf*** and I will forget
+    ///Sorry for the language but I am just being honest with myself twinn
+    ///NavBar done August 30, 2026
+    ///Adding Hero section  August 31, 2026
+    ///SONNNNNNNNNNNN

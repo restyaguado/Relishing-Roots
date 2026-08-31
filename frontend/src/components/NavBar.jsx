@@ -4,11 +4,17 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-between px-10 py-4 bg-white">
       <div className="flex items-center gap-3">
-        <img src={logo} alt="Relishing Roots logo" className="w-10 h-10" />
-        <span className="text-2xl font-semibold text-purple-900" style={{ fontFamily: 'Caveat, cursive' }}>
+        <img src={logo} alt="Relishing Roots logo" className="w-15 h-15" />
+        <span
+          className="text-2xl font-semibold"
+          style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44' }}>
+
           Relishing Roots
+
         </span>
       </div>
+
+
 
       <div className="flex items-center gap-8 text-gray-800 font-medium">
         <a href="/">Home</a>
@@ -16,6 +22,8 @@ function Navbar() {
         <a href="/favorites">Favorites</a>
         <a href="/profile">Profile</a>
       </div>
+
+
 
       <div className="flex items-center gap-5">
         <a href="/signup" className="text-gray-700 font-medium">Sign up</a>
@@ -25,9 +33,8 @@ function Navbar() {
       </div>
     </nav>
 
-    ///this is for now imma continue with the navbar and then add the rest of the pages later
-    ///reminding myself because I am lazy asf*** and I will forget
-    ///Sorry for the language but I am just being honest with myself twinn
+
+
   );
 }
 
