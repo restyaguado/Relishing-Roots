@@ -16,3 +16,7 @@ createRoot(document.getElementById('root')).render(
     ///NavBar done August 30, 2026
     ///Adding Hero section  August 31, 2026
     ///SONNNNNNNNNNNN
+    ///RecipeCard (Added 10 of em)done September 1, 2026
+    ///RevealOnScroll (Added - experimental - optional) done September 4, 2026
+    ///I will just finish my part for this. Also an exp for me.
+

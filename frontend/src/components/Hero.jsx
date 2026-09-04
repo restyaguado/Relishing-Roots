@@ -7,10 +7,8 @@ function Hero() {
   const [activeFilter, setActiveFilter] = useState('All');
 
   return (
-    <section
-      className="bg-cover bg-center px-10 py-20 text-center"
-      style={{ backgroundImage: `url(${heroImg})` }}
-    >
+    <section className="min-h-screen flex flex-col items-center justify-center px-10 text-center">
+
       <h1 className="font-bold"
           style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44', fontSize: '4.5rem', lineHeight: '1.2', }}>
         Recipe with <span className="text-orange-500"> memory </span>,
