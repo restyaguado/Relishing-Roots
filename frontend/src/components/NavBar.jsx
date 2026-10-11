@@ -22,7 +22,7 @@ function Navbar({ user, onLogout }) {
 
 
 
-      <div className="order-last w-full flex items-center justify-center gap-5 text-sm md:order-none md:w-auto md:gap-8 md:text-base text-gray-800 font-medium">
+      <div className="order-last w-full flex items-center justify-center gap-5 text-sm md:order-0 md:w-auto md:gap-8 md:text-base text-gray-800 font-medium">
         <Link to="/">Home</Link>
         <Link to="/add-recipe">Add Recipe</Link>
         <Link to="/favorites">Favorites</Link>
