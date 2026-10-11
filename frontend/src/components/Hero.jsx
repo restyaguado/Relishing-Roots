@@ -6,10 +6,10 @@ function Hero({ activeFilter, setActiveFilter, searchQuery, setSearchQuery }) {
   const navigate = useNavigate();
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-10 text-center">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 text-center">
 
       <h1 className="font-bold"
-          style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44', fontSize: '4.5rem', lineHeight: '1.2', }}>
+          style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44', fontSize: 'clamp(2.75rem, 8vw, 4.5rem)', lineHeight: '1.2', }}>
         Recipe with <span className="text-orange-500"> memory </span>,
         <br />
         flavor & meaning.
@@ -29,35 +29,33 @@ function Hero({ activeFilter, setActiveFilter, searchQuery, setSearchQuery }) {
       </button>
 
 
-      <div className="mt-10 flex items-center justify-center gap-3">
-        <div className="flex bg-white rounded-full overflow-hidden">
+      <div className="mt-10 w-full flex flex-wrap items-center justify-center gap-3">
+        <div className="flex bg-white rounded-full overflow-hidden w-full max-w-sm sm:w-auto">
           <input
             type="text"
             placeholder="What are you looking for?"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="px-5 py-3 outline-none"
+            className="flex-1 min-w-0 px-5 py-3 outline-none"
           />
           <button className="bg-purple-900 text-white px-6">Search</button>
         </div>
 
-
-
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            className={
-              activeFilter === filter
-                ? 'bg-purple-900 text-white px-5 py-2 rounded-full font-medium'
-                : 'bg-white text-gray-700 px-5 py-2 rounded-full font-medium'
-            }
-          >
-            {filter}
-          </button>
-
-          
-        ))}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={
+                activeFilter === filter
+                  ? 'bg-purple-900 text-white px-5 py-2 rounded-full font-medium'
+                  : 'bg-white text-gray-700 px-5 py-2 rounded-full font-medium'
+              }
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

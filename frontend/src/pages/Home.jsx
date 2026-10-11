@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Hero from '../components/Hero';
 import RecipeCard from '../components/TheRecipeCard';
 import RevealOnScroll from '../components/RevealOnScroll';
-import heroImg from '../assets/hero.jpg';
 
 function Home({ recipes, favorites, onToggleFavorite }) {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -17,13 +16,7 @@ function Home({ recipes, favorites, onToggleFavorite }) {
   });
 
   return (
-    <div style={{
-      backgroundImage: `url(${heroImg})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'top center',
-      }}>
-
+    <>
       <RevealOnScroll>
         <Hero
           activeFilter={activeFilter}
@@ -32,6 +25,7 @@ function Home({ recipes, favorites, onToggleFavorite }) {
           setSearchQuery={setSearchQuery}
         />
       </RevealOnScroll>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-16 px-6">
         {filteredRecipes.length > 0 ? (
           filteredRecipes.map((recipe) => (
@@ -44,12 +38,12 @@ function Home({ recipes, favorites, onToggleFavorite }) {
             </RevealOnScroll>
           ))
         ) : (
-          <p className="col-span-full text-center text-gray-500">
+          <p className="col-span-full justify-self-center bg-white rounded-2xl shadow-md px-6 py-4 text-gray-600">
             No recipes found.
           </p>
         )}
       </div>
-    </div>
+    </>
   );
 }
 

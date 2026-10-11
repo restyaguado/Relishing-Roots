@@ -7,14 +7,25 @@ import AddRecipe from './pages/AddRecipe';
 import Favorites from './pages/Favorites';
 import Profile from './pages/Profile';
 import SignUp from './pages/SignUp';
+import Login from './pages/Login';
+import RecipeDetail from './pages/RecipeDetail';
 import initialRecipes from './data/recipes';
+import heroImg from './assets/hero.jpg';
+
+// The name shown on the Profile page before the visitor sets their own.
+const DEFAULT_NAME = 'Home Cook';
 
 function App() {
   const [recipes, setRecipes] = useState(initialRecipes);
   const [favorites, setFavorites] = useState([]);
+  const [user, setUser] = useState(null);
+  const [profileName, setProfileName] = useState(DEFAULT_NAME);
 
   const addRecipe = (recipe) => {
-    setRecipes((prev) => [recipe, ...prev]);
+    setRecipes((prev) => [
+      { ...recipe, id: `user-${Date.now()}`, addedByUser: true },
+      ...prev,
+    ]);
   };
 
   const toggleFavorite = (title) => {
@@ -23,9 +34,35 @@ function App() {
     );
   };
 
+  const login = (newUser) => {
+    setUser({ email: newUser.email });
+    setProfileName(newUser.name);
+  };
+
+  const logout = () => {
+    setUser(null);
+    setProfileName(DEFAULT_NAME);
+  };
+
+  const currentUser = user ? { ...user, name: profileName } : null;
+
   return (
     <>
-      <Navbar />
+      {/* Site-wide background: a fixed layer the size of the screen, shown at full
+          strength on every page. It never stretches or zooms when a page gets
+          taller or shorter. */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-0 -z-10 pointer-events-none"
+        style={{
+          backgroundImage: `url(${heroImg})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top center',
+        }}
+      />
+
+      <Navbar user={currentUser} onLogout={logout} />
       <Routes>
         <Route
           path="/"
@@ -48,8 +85,30 @@ function App() {
             />
           }
         />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route
+          path="/profile"
+          element={
+            <Profile
+              recipes={recipes}
+              favorites={favorites}
+              user={currentUser}
+              name={profileName}
+              onUpdateName={setProfileName}
+            />
+          }
+        />
+        <Route path="/signup" element={<SignUp onLogin={login} />} />
+        <Route path="/login" element={<Login onLogin={login} />} />
+        <Route
+          path="/recipe/:id"
+          element={
+            <RecipeDetail
+              recipes={recipes}
+              favorites={favorites}
+              onToggleFavorite={toggleFavorite}
+            />
+          }
+        />
       </Routes>
     </>
   );
