@@ -48,9 +48,7 @@ function App() {
 
   return (
     <>
-      {/* Site-wide background: a fixed layer the size of the screen, shown at full
-          strength on every page. It never stretches or zooms when a page gets
-          taller or shorter. */}
+
       <div
         aria-hidden="true"
         className="fixed inset-0 -z-10 pointer-events-none"
