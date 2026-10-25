@@ -12,7 +12,7 @@ import RecipeDetail from './pages/RecipeDetail';
 import initialRecipes from './data/recipes';
 import heroImg from './assets/hero.jpg';
 
-// The name shown on the Profile page before the visitor sets their own.
+
 const DEFAULT_NAME = 'Home Cook';
 
 function App() {
