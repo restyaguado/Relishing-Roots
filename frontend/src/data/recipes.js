@@ -27,8 +27,9 @@ const recipes = [
     description: 'Made whenever someone in the family caught a cold.',
     story: 'Still the first thing I crave when I\'m sick.',
   },
+
   {
-    image: './ImagesForRecipe/RicePilaf.jpg',
+    image: '/ImagesForRecipe/RicePilaf.jpg',
     category: 'Holiday',
     title: 'Holiday Rice Pilaf',
     description: 'Never missing from the table on special occasions.',
@@ -55,8 +56,9 @@ const recipes = [
     description: 'Leftover rice, turned into something worth waking up for.',
     story: 'Mom made this every time there was rice left from the night before.',
   },
+
   {
-    image: './ImagesForRecipe/SquashSoup.jpg',
+    image: '/ImagesForRecipe/SquashSoup.jpg',
     category: 'Seasonal',
     title: 'Squash Soup',
     description: 'A quiet, warm dish for the first cold nights of the year.',
@@ -85,6 +87,7 @@ const details = {
     ingredients: ['1 1/2 cups flour', '2 tbsp sugar', '2 tsp baking powder', '1 egg', '1 1/4 cups milk', '3 tbsp melted butter'],
     steps: ['Whisk the dry ingredients, then mix in the egg, milk and butter until just combined.', 'Pour 1/4 cup of batter at a time onto a lightly greased hot pan.', 'Flip when bubbles form (not too high!) and cook until golden.'],
   },
+
   "Auntie's Noodle Soup": {
     ingredients: ['200 g egg noodles', '1 liter chicken broth', '2 cloves garlic, minced', '1 thumb of ginger, sliced', '1 cup shredded chicken', 'Spring onions to finish'],
     steps: ['Simmer the broth with the garlic and ginger for 10 minutes.', 'Add the chicken, then cook the noodles in the broth until soft.', 'Top with spring onions and serve piping hot.'],
