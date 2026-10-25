@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-function RevealOnScroll({ children }) {
+function RevealOnScroll({ children, className = '' }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -21,9 +21,8 @@ function RevealOnScroll({ children }) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
+      className={`${className} transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
     >
       {children}
     </div>
