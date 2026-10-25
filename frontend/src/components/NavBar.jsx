@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/relishing_roots_icon.svg';
 
-//If a user was on Login/Signup page, the logo in the NavBar was hidden, since it was already shown in the top of those pages. And will be back again if the user login/Signedup:>
+//If a user was on Login/Signup page, the logo in the NavBar will be hidden, since it was already shown in the top of those pages. And will be back again if the user login/Signedup:>
 function Navbar({ user, onLogout }) {
   const { pathname } = useLocation();
   const pagesWithOwnLogo = ['/login', '/signup'];
