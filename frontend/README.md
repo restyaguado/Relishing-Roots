@@ -12,7 +12,7 @@ This is a frontend-only project, there is no backend or database, everything is 
 
 | Favorites | Add a recipe |
 | --- | --- |
-| ![Favorites page](public/ScreenShots/Favorites.png) | ![Add recipe form](public/ScreenShots/Addrecipe.png) |
+| ![Favorites page](public/ScreenShots/Favorites.png) | ![Add recipe form](public/ScreenShots/AddRecipe.png) |
 
 | Profile | Mobile view |
 | --- | --- |
