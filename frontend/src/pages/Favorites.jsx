@@ -1,6 +1,9 @@
 import RecipeCard from '../components/TheRecipeCard';
 import RevealOnScroll from '../components/RevealOnScroll';
 
+
+const CARD_WIDTH = 'w-full sm:w-[calc((100%_-_1.5rem)/2)] lg:w-[calc((100%_-_3rem)/3)]';
+
 function Favorites({ recipes, favorites, onToggleFavorite }) {
   const favoriteRecipes = recipes.filter((recipe) => favorites.includes(recipe.title));
 
@@ -20,10 +23,11 @@ function Favorites({ recipes, favorites, onToggleFavorite }) {
           Favorites
         </h1>
       </div>
+
       {favoriteRecipes.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {favoriteRecipes.map((recipe) => (
-            <RevealOnScroll key={recipe.title}>
+            <RevealOnScroll key={recipe.title} className={CARD_WIDTH}>
               <RecipeCard
                 {...recipe}
                 isFavorite={true}
