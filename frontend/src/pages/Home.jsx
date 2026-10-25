@@ -3,6 +3,8 @@ import Hero from '../components/Hero';
 import RecipeCard from '../components/TheRecipeCard';
 import RevealOnScroll from '../components/RevealOnScroll';
 
+const CARD_WIDTH = 'w-full sm:w-[calc((100%_-_1.5rem)/2)] lg:w-[calc((100%_-_3rem)/3)]';
+
 function Home({ recipes, favorites, onToggleFavorite }) {
   const [activeFilter, setActiveFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -26,10 +28,10 @@ function Home({ recipes, favorites, onToggleFavorite }) {
         />
       </RevealOnScroll>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-16 px-6">
+      <div className="flex flex-wrap justify-center gap-6 py-16 px-6">
         {filteredRecipes.length > 0 ? (
           filteredRecipes.map((recipe) => (
-            <RevealOnScroll key={recipe.title}>
+            <RevealOnScroll key={recipe.title} className={CARD_WIDTH}>
               <RecipeCard
                 {...recipe}
                 isFavorite={favorites.includes(recipe.title)}
@@ -38,7 +40,7 @@ function Home({ recipes, favorites, onToggleFavorite }) {
             </RevealOnScroll>
           ))
         ) : (
-          <p className="col-span-full justify-self-center bg-white rounded-2xl shadow-md px-6 py-4 text-gray-600">
+          <p className="bg-white rounded-2xl shadow-md px-6 py-4 text-gray-600">
             No recipes found.
           </p>
         )}
