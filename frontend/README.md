@@ -2,7 +2,7 @@
 
 A recipe site for family dishes and stories. Easily browse and search recipes with filters, view full recipe pages with the story, ingredients and steps, save your favorites and add your own recipes.
 
-This is a frontend-only project, there is no backend or database, everything is stored in the browser's memory (see [Limitations](#limitations)).
+This is a frontend-only project. (see [Limitations](#limitations)).
 
 ## Screenshots
 
