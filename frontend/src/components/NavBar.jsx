@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/relishing_roots_icon.svg';
 
-//If a user was on Login/Signup page, the logo in the NavBar will be hidden, since it was already shown in the top of those pages. And will be back again if the user login/Signedup:>
 function Navbar({ user, onLogout }) {
   const { pathname } = useLocation();
   const pagesWithOwnLogo = ['/login', '/signup'];
@@ -9,10 +8,10 @@ function Navbar({ user, onLogout }) {
 
   return (
     <nav className="flex flex-wrap items-center justify-between gap-y-3 px-4 sm:px-10 py-4 bg-white">
-      <div className="flex items-center gap-3 min-h-15">
-        {showLogo && <img src={logo} alt="Relishing Roots logo" className="w-15 h-15" />}
+      <div className="flex items-center gap-2 sm:gap-3 min-h-10 sm:min-h-15">
+        {showLogo && <img src={logo} alt="Relishing Roots logo" className="w-10 h-10 sm:w-15 sm:h-15" />}
         <span
-          className="text-2xl font-semibold"
+          className="text-xl sm:text-2xl font-semibold"
           style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44' }}>
 
           Relishing Roots
@@ -22,7 +21,7 @@ function Navbar({ user, onLogout }) {
 
 
 
-      <div className="order-last w-full flex items-center justify-center gap-5 text-sm md:order-0 md:w-auto md:gap-8 md:text-base text-gray-800 font-medium">
+      <div className="order-last w-full flex items-center justify-center gap-5 text-sm sm:text-base lg:order-none lg:w-auto lg:gap-8 text-gray-800 font-medium">
         <Link to="/">Home</Link>
         <Link to="/add-recipe">Add Recipe</Link>
         <Link to="/favorites">Favorites</Link>
@@ -34,22 +33,22 @@ function Navbar({ user, onLogout }) {
       <div className="flex items-center gap-3 sm:gap-5">
         {user ? (
           <>
-            <Link to="/profile" className="text-gray-700 font-medium">
+            <Link to="/profile" className="text-sm sm:text-base text-gray-700 font-medium">
               Hi, {user.name}
             </Link>
             <button
               onClick={onLogout}
-              className="bg-purple-900 text-white px-4 sm:px-6 py-2 rounded-full font-semibold"
+              className="text-sm sm:text-base bg-purple-900 text-white px-4 sm:px-6 py-2 rounded-full font-semibold"
             >
               Log out
             </button>
           </>
         ) : (
           <>
-            <Link to="/signup" className="text-gray-700 font-medium">Sign up</Link>
+            <Link to="/signup" className="text-sm sm:text-base text-gray-700 font-medium">Sign up</Link>
             <Link
               to="/login"
-              className="bg-purple-900 text-white px-4 sm:px-6 py-2 rounded-full font-semibold"
+              className="text-sm sm:text-base bg-purple-900 text-white px-4 sm:px-6 py-2 rounded-full font-semibold"
             >
               Log in
             </Link>

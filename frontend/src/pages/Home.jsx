@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import RecipeCard from '../components/TheRecipeCard';
 import RevealOnScroll from '../components/RevealOnScroll';
 
+
 const CARD_WIDTH = 'w-full sm:w-[calc((100%_-_1.5rem)/2)] lg:w-[calc((100%_-_3rem)/3)]';
 
 function Home({ recipes, favorites, onToggleFavorite }) {
@@ -28,7 +29,7 @@ function Home({ recipes, favorites, onToggleFavorite }) {
         />
       </RevealOnScroll>
 
-      <div className="flex flex-wrap justify-center gap-6 py-16 px-6">
+      <div className="flex flex-wrap justify-center gap-6 py-16 px-6 max-w-7xl mx-auto">
         {filteredRecipes.length > 0 ? (
           filteredRecipes.map((recipe) => (
             <RevealOnScroll key={recipe.title} className={CARD_WIDTH}>

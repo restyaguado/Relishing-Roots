@@ -63,9 +63,11 @@ function RecipeDetail({ recipes, favorites, onToggleFavorite }) {
           </div>
 
           {recipe.story && (
-            <p className="mt-6 italic text-gray-500 border-l-4 pl-4" style={{ borderColor: '#4A1A44' }}>
-              "{recipe.story}"
-            </p>
+            <div className="mt-6">
+              <p className="italic text-gray-500 border-l-4 pl-4" style={{ borderColor: '#4A1A44' }}>
+                "{recipe.story}"
+              </p>
+            </div>
           )}
 
           {hasIngredients && (
@@ -91,7 +93,7 @@ function RecipeDetail({ recipes, favorites, onToggleFavorite }) {
           )}
 
           {!hasIngredients && !hasSteps && (
-            <p className="mt-8 text-gray-500">No ingredients or steps were added for this recipe.</p>
+            <p className="pt-8 text-gray-500">No ingredients or steps were added for this recipe.</p>
           )}
         </div>
       </div>
@@ -99,4 +101,4 @@ function RecipeDetail({ recipes, favorites, onToggleFavorite }) {
   );
 }
 
-export default RecipeDetail;    
+export default RecipeDetail;

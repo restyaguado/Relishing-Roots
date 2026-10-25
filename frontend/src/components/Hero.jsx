@@ -8,15 +8,15 @@ function Hero({ activeFilter, setActiveFilter, searchQuery, setSearchQuery }) {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 text-center">
 
-      <h1 className="font-bold"
+      <h1 className="font-bold text-balance"
         style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44', fontSize: 'clamp(2.75rem, 8vw, 4.5rem)', lineHeight: '1.2', }}>
-        Recipe with <span className="text-orange-500"> memory </span>,
+        Recipe with <span className="text-orange-500">memory</span>,
         <br />
         flavor & meaning.
       </h1>
 
 
-      <p className="mt-4 text-lg italic text-gray-600">
+      <p className="mt-4 text-lg italic text-gray-600 text-balance">
         Every recipe, every story, all in one place
       </p>
 
@@ -38,7 +38,7 @@ function Hero({ activeFilter, setActiveFilter, searchQuery, setSearchQuery }) {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="flex-1 min-w-0 px-5 py-3 outline-none"
           />
-          <button className="bg-purple-900 text-white px-6">Search</button>
+          <button className="bg-purple-900 text-white px-5 py-3">Search</button>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">

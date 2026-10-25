@@ -104,16 +104,16 @@ function Profile({ recipes, favorites, user, name, onUpdateName }) {
         ))}
       </div>
 
-      <div className="mt-10 flex items-center gap-4">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
         <Link
           to="/add-recipe"
-          className="bg-purple-900 text-white px-6 py-3 rounded-full font-semibold"
+          className="whitespace-nowrap bg-purple-900 text-white px-6 py-3 rounded-full font-semibold"
         >
           + Add a recipe
         </Link>
         <Link
           to="/favorites"
-          className="bg-white text-gray-700 px-6 py-3 rounded-full font-semibold shadow"
+          className="whitespace-nowrap bg-white text-gray-700 px-6 py-3 rounded-full font-semibold shadow"
         >
           View favorites
         </Link>

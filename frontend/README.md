@@ -4,6 +4,20 @@ A recipe site for family dishes and stories. Easily browse and search recipes wi
 
 This is a frontend-only project, there is no backend or database, everything is stored in the browser's memory (see [Limitations](#limitations)).
 
+## Screenshots
+
+| Home | Recipe page |
+| --- | --- |
+| ![Home page](public/Screenshots/Home.png) | ![Recipe page](public/Screenshots/Recipe.png) |
+
+| Favorites | Add a recipe |
+| --- | --- |
+| ![Favorites page](public/Screenshots/Favorites.png) | ![Add recipe form](public/Screenshots/Addrecipe.png) |
+
+| Profile | Mobile view |
+| --- | --- |
+| ![Profile page](public/Screenshots/Profile.png) | ![Mobile view](public/Screenshots/MobileView.png) |
+
 ## Features
 
 - Browse a grid of recipe cards with a story and photo for each one
@@ -11,7 +25,7 @@ This is a frontend-only project, there is no backend or database, everything is 
 - Recipe pages with a large photo, the story, ingredients and steps
 - Favorites: tap the heart on any card or recipe page, then see them all on the Favorites page
 - Add a recipe with a title, category, description, story, ingredients, steps and an optional photo
-- Profile	 page with live counts (recipes added, favorites, categories)
+- Profile page with live counts (recipes added, favorites, categories)
 - Sign up / Log in screens (simulated, see below)
 - Responsive layout and fade-in-on-scroll animations
 
@@ -82,7 +96,7 @@ The ingredients and steps for each starter recipe are in the details object near
 Those are sample versions, so you should replace them with your family's real ones.
 
 To add a photo to a starter recipe, copy the image into public/ImagesForRecipe/ , then reference it as 
-./ImagesForRecipe/YourFile.jpg (you can also put your own images in this folder). 
+/ImagesForRecipe/YourFile.jpg (start the path with a `/`, so the photo also shows on recipe pages). 
 We recommend keeping photos at around 900px wide and under about 150 KB in size -- larger images can cause lag when scrolling.
 
 ## Limitations

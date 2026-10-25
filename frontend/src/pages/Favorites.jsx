@@ -25,7 +25,7 @@ function Favorites({ recipes, favorites, onToggleFavorite }) {
       </div>
 
       {favoriteRecipes.length > 0 ? (
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
           {favoriteRecipes.map((recipe) => (
             <RevealOnScroll key={recipe.title} className={CARD_WIDTH}>
               <RecipeCard
