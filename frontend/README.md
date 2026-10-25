@@ -8,15 +8,15 @@ This is a frontend-only project, there is no backend or database, everything is 
 
 | Home | Recipe page |
 | --- | --- |
-| ![Home page](public/Screenshots/Home.png) | ![Recipe page](public/Screenshots/Recipe.png) |
+| ![Home page](public/ScreenShots/Home.png) | ![Recipe page](public/ScreenShots/Recipe.png) |
 
 | Favorites | Add a recipe |
 | --- | --- |
-| ![Favorites page](public/Screenshots/Favorites.png) | ![Add recipe form](public/Screenshots/Addrecipe.png) |
+| ![Favorites page](public/ScreenShots/Favorites.png) | ![Add recipe form](public/ScreenShots/Addrecipe.png) |
 
 | Profile | Mobile view |
 | --- | --- |
-| ![Profile page](public/Screenshots/Profile.png) | ![Mobile view](public/Screenshots/MobileView.png) |
+| ![Profile page](public/ScreenShots/Profile.png) | ![Mobile view](public/ScreenShots/MobileView.png) |
 
 ## Features
 
