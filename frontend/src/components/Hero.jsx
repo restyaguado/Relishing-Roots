@@ -9,7 +9,7 @@ function Hero({ activeFilter, setActiveFilter, searchQuery, setSearchQuery }) {
     <section className="min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 text-center">
 
       <h1 className="font-bold"
-          style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44', fontSize: 'clamp(2.75rem, 8vw, 4.5rem)', lineHeight: '1.2', }}>
+        style={{ fontFamily: 'Caveat, cursive', color: '#4A1A44', fontSize: 'clamp(2.75rem, 8vw, 4.5rem)', lineHeight: '1.2', }}>
         Recipe with <span className="text-orange-500"> memory </span>,
         <br />
         flavor & meaning.
