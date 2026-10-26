@@ -29,7 +29,7 @@ function Home({ recipes, favorites, onToggleFavorite }) {
         />
       </RevealOnScroll>
 
-      <div className="flex flex-wrap justify-center gap-6 py-16 px-6 max-w-7xl mx-auto">
+      <div className="-mt-16 flex flex-wrap justify-center gap-6 pt-8 pb-16 px-6 max-w-7xl mx-auto">
         {filteredRecipes.length > 0 ? (
           filteredRecipes.map((recipe) => (
             <RevealOnScroll key={recipe.title} className={CARD_WIDTH}>

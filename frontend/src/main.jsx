@@ -19,4 +19,4 @@ createRoot(document.getElementById('root')).render(
     ///Adding Hero section  August 31, 2026
     ///RecipeCard (Added 10 of em)done September 1, 2026
     ///RevealOnScroll done September 4, 2026
-    /// 
+    ///        
